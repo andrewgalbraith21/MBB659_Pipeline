@@ -1,0 +1,9 @@
+{
+    "reference": "/projects/agalbraith_prj/OXBSFlowPipeline/MBB659_Pipeline/Data/Reference/mm10.fa",
+    "reference_index": "/projects/agalbraith_prj/OXBSFlowPipeline/MBB659_Pipeline/Data/Reference/mm10.index",
+    "BS_fastq": "/projects/agalbraith_prj/OXBSFlowPipeline/MBB659_Pipeline/Data/Fastq_subset2/BS/*fastq*",
+    "OXBS_fastq": "/projects/agalbraith_prj/OXBSFlowPipeline/MBB659_Pipeline/Data/Fastq_subset2/OXBS/*fastq*",
+    "output_directory": "/projects/agalbraith_prj/OXBSFlowPipeline/MBB659_Pipeline/Out",
+    "RandomRun": false,
+    "TestFastqSize": 0
+}
