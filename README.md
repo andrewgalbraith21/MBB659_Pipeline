@@ -8,8 +8,8 @@
 
 ### Directories
 
-  + Data:  Contains Fastq files and Reference genome fasta file which serve as inputs 
-        for the pipeline. Fastq_subset and Fastq_subset2 folders contain 3 and 5 small fastq files to test the pipeline on. BS and OXBS folders contain the BS and OXBS fastq data respectively. 
+  + Data:  Contains Fastq files which serve as inputs 
+        for the pipeline. Fastq_subset and Fastq_subset2 folders contain 3 and 5 small fastq files to test the pipeline on. BS and OXBS folders contain the BS and OXBS fastq data respectively. Originall contained reference file however, this was too large to add to repository.
   
   + singularity: Singularity cache if attempting to run pipeline with singularity
         instead of conda (Not Recommended)
@@ -112,7 +112,7 @@ cd MBB659_Pipeline
 ```
 mkdir Out
 ```
-4. Configure the parameters of MethOxFlow in the MethOXFlow_params.json. Note, the reference file and fastq files are in the repository. If you do not have a reference file or reference index the pipeline will create them and export them to the path specified. Note, the pipeline is only capable of downloading the mus musculus reference genome in this case. If you are using the pipeline to download the reference, then please make the reference file path within the Reference directory. Use the Fastq_subset2 data for reproducible results. 
+4. Configure the parameters of MethOxFlow in the MethOXFlow_params.json. Note, the fastq files are in the repository. If you do not have a reference file or reference index the pipeline will create them and export them to the path specified. Note, the pipeline is only capable of downloading the mus musculus reference genome in this case. If you are using the pipeline to download the reference, then please make the reference file path within the ./Data/Reference directory. Use the Fastq_subset2 data for reproducible results. 
 ```
 {
     "reference": "<path_to_reference_file>",
@@ -123,6 +123,10 @@ mkdir Out
     "RandomRun": false,
     "TestFastqSize": 0
 }
+```
+4b. If using pipeline to download reference:
+```
+mkdir Data/Reference
 ```
 5. You can now run the nextflow pipeline. Note, the pipeline can also be run with singularity using the seperate config file but this is not recommended due to it taking very long to load the singularity images. 
 
