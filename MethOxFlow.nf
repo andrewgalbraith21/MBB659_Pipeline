@@ -360,7 +360,7 @@ workflow {
     // index reference if it has not already been done so
     if (!reference_index.exists()){
 
-        reference_index_path = index_reference(params.reference, params.reference_index)
+        reference_index_path = index_reference(reference_path, params.reference_index)
 
     }
     else{
