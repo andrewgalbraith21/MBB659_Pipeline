@@ -49,10 +49,11 @@ Channel
 // process to download mouse reference genome
 // for testing purposes, skip this step and use reference already installed in directory 
 process download_ref { 
-
+    input:
+        path(reference)
     // get and extract mouse reference fasta genome
     output:
-        path("${projectDir}/Data/Reference/mm10.fa")
+        path(reference)
     script:
         """
         wget -P ${projectDir}/Data/Reference http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz 
@@ -322,7 +323,7 @@ workflow {
     // will download to parameterized location
     if (!reference_file.exists()){
 
-        reference_path = download_ref()
+        reference_path = download_ref(params.reference)
 
     }
     else {
