@@ -56,7 +56,16 @@ This pipeline aims to identify both 5mC and 5hmC profiles from BS and OxBS data.
 
 ## Dataset
 
-The dataset for this pipeline comes from Stoyanova et al. who investigated the role of hydroxymethylation in neuronal differentiation using Mus musculus brain cells (17, https://www.ncbi.nlm.nih.gov/bioproject/700864). SRR13665287 is OxBS data from Purkinje cells and SRR13665293 is BS data from Purjinke cells. This dataset was chosen as it was one of the only ones I could find with easily available OXBS and BS fastq data. Further, Mus musculus genome is slightly less large and complex in comparison to Homo sapiens making it better suited for pipeline testing.
+The dataset for this pipeline comes from Stoyanova et al. who investigated the role of hydroxymethylation in neuronal differentiation using Mus musculus brain cells (17, https://www.ncbi.nlm.nih.gov/bioproject/700864). SRR13665287 is OxBS data from Purkinje cells and SRR13665293 is BS data from Purjinke cells. This dataset was chosen as it was one of the only ones I could find with easily available OXBS and BS fastq data. Further, Mus musculus genome is slightly less large and complex in comparison to Homo sapiens making it better suited for pipeline testing. The fastq data can be downloaded, however this is not necessary as subsets exist in the repository:
+```
+fastq-dump --clip --read-filter pass SRR13665293
+fastq-dump --clip --read-filter pass SRR13665287
+```
+The reference can be downloaded with (The pipeline can do this if needed):
+```
+wget http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz
+gunzip mm10.fa.gz
+```
 
 ### Pipeline Overview
 

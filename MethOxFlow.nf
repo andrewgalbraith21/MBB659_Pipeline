@@ -56,7 +56,8 @@ process download_ref {
         path(reference)
     script:
         """
-        wget -P ${projectDir}/Data/Reference http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz | gunzip
+        wget -P ${projectDir}/Data/Reference http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz 
+        gunzip ${projectDir}/Data/Reference/mm10.fa.gz
         """
 }
 
