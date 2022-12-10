@@ -103,7 +103,7 @@ cd MBB659_Pipeline
 ```
 mkdir Out
 ```
-4. Configure the parameters of MethOxFlow in the MethOXFlow_params.json. Note, the reference file and fastq files are in the repository. If you do not have a reference file or reference index the pipeline will create them and export them to the path specified. Note, the pipeline is only capable of downloading the mus musculus reference genome in this case. Use the Fastq_subset2 data for reproducible results. 
+4. Configure the parameters of MethOxFlow in the MethOXFlow_params.json. Note, the reference file and fastq files are in the repository. If you do not have a reference file or reference index the pipeline will create them and export them to the path specified. Note, the pipeline is only capable of downloading the mus musculus reference genome in this case. If you are using the pipeline to download the reference, then please make the reference file path within the Reference directory. Use the Fastq_subset2 data for reproducible results. 
 ```
 {
     "reference": "<path_to_reference_file>",
